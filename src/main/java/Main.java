@@ -1,9 +1,12 @@
+import adapter.CompositeAndBridgeImpl;
 import bridge.CrossingImpl;
 import bridge.crosingtypes.PantoonCrossing;
 import bridge.terraintocrosstypes.RiverCross;
 import flyweight.BloggerStyleFlyweight;
 import flyweight.FlyweightStylesFactory;
 
+import static adapter.BridgeEnum.RAILROAD_BRIDGE;
+import static adapter.BridgeEnum.RIVER_BRIDGE;
 import static flyweight.Constants.FUNNY_STYLE;
 import static flyweight.Constants.HORROR_STYLE;
 
@@ -25,6 +28,11 @@ public class Main {
         bFunnyStyleFlyweight.getStyleForBlog("comedy BLOG");
         BloggerStyleFlyweight bHorrorStyleFlyweight = flStyleFactory.getBlogerFlyweight(HORROR_STYLE);
         bHorrorStyleFlyweight.getStyleForBlog("adult BLOG");
+        /*ADAPTER*/
+        CompositeAndBridgeImpl adapt = new CompositeAndBridgeImpl();
+        adapt.buildBridge(RIVER_BRIDGE);
+        adapt.buildBridge(RAILROAD_BRIDGE);
+        adapt.getFileNamesScanner();
 
     }
 }

@@ -5,7 +5,6 @@ package flyweight;
  */
 public class FlyweightHorrorStyleBlog implements BloggerStyleFlyweight {
 
-    @Override
     public void getStyleForBlog(String blogName) {
      System.out.println("Selected horror style for " + blogName);
     }
