@@ -6,9 +6,7 @@ import java.util.Map;
 import static flyweight.Constants.FUNNY_STYLE;
 import static flyweight.Constants.HORROR_STYLE;
 
-/**
- * Created by Ihar_Rubanovich on 3/9/2017.
- */
+/*flyweight*/
 public class FlyweightStylesFactory {
     private static volatile FlyweightStylesFactory flyweightStylesFactory;
     private Map<String, BloggerStyleFlyweight> bStyleFlyweightMap;
@@ -32,12 +30,10 @@ public class FlyweightStylesFactory {
             return bStyleFlyweight;
         }
     }
-
     private  BloggerStyleFlyweight getAction(StyleTypesEnum action)
     {
         return action.getInstance();
     }
-
     public static FlyweightStylesFactory getInstance() {
         if (flyweightStylesFactory == null) {
             synchronized (FlyweightStylesFactory.class) {

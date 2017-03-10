@@ -3,23 +3,17 @@ package composite;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ihar_Rubanovich on 2/1/2017.
- */
+/*composite*/
 public class DirectoryEntity implements FileSystemEntity {
-
     private String directoyName;
     private long dirSize;
     private List<FileEntity> fileEntityList = new ArrayList();
-
     public DirectoryEntity(String directoyName) {
-
         this.directoyName = directoyName;
     }
     public void add(FileEntity fe) {
         fileEntityList.add(fe);
     }
-
     public FileEntity getChild(int i) {
         return fileEntityList.get(i);
     }

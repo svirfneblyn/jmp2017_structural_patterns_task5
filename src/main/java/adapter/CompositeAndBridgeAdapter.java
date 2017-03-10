@@ -1,8 +1,6 @@
 package adapter;
 
-/**
- * Created by User on 3/9/2017.
- */
+/*adapter*/
 public interface CompositeAndBridgeAdapter {
     public void buildBridge(BridgeEnum typeToCross);
     public void getFileNamesScanner();

@@ -2,12 +2,9 @@ package bridge;
 
 import bridge.icrossing.ICrossing;
 
-/**
- * Created by Ihar_Rubanovich on 3/7/2017.
- */
+/*bridge*/
 public abstract class CrossingImpl {
     public ICrossing iCrossing;
-
     public CrossingImpl(ICrossing iCrossing) {
         this.iCrossing = iCrossing;
     }

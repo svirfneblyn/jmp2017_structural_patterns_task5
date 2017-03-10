@@ -1,38 +1,19 @@
-import adapter.CompositeAndBridgeImpl;
-import bridge.CrossingImpl;
-import bridge.crosingtypes.PantoonCrossing;
-import bridge.terraintocrosstypes.RiverCross;
-import flyweight.BloggerStyleFlyweight;
-import flyweight.FlyweightStylesFactory;
+import facade.PatternDemonstrator;
 
-import static adapter.BridgeEnum.RAILROAD_BRIDGE;
-import static adapter.BridgeEnum.RIVER_BRIDGE;
-import static flyweight.Constants.FUNNY_STYLE;
-import static flyweight.Constants.HORROR_STYLE;
 
-/**
- * Created by Ihar_Rubanovich on 3/7/2017.
- */
 public class Main {
     public static void main(String[] args) {
-        /*BRIDGE Pattern Demo*/
-        CrossingImpl cr = new RiverCross(new PantoonCrossing());
-        cr.deploy();
-        cr.undeploy();
-        /*COMPOSITE PATTERN DEMO*/
-      /*  FSManager fs= new FSManager();
-        fs.compositDemo(PATH_TO_SCAN);*/
-        /*FLYWEIGHT PATTERN DEMO*/
-        FlyweightStylesFactory flStyleFactory = FlyweightStylesFactory.getInstance();
-        BloggerStyleFlyweight bFunnyStyleFlyweight = flStyleFactory.getBlogerFlyweight(FUNNY_STYLE);
-        bFunnyStyleFlyweight.getStyleForBlog("comedy BLOG");
-        BloggerStyleFlyweight bHorrorStyleFlyweight = flStyleFactory.getBlogerFlyweight(HORROR_STYLE);
-        bHorrorStyleFlyweight.getStyleForBlog("adult BLOG");
-        /*ADAPTER*/
-        CompositeAndBridgeImpl adapt = new CompositeAndBridgeImpl();
-        adapt.buildBridge(RIVER_BRIDGE);
-        adapt.buildBridge(RAILROAD_BRIDGE);
-        adapt.getFileNamesScanner();
-
+        /*FACADE PATTERN*/
+        PatternDemonstrator pd = new PatternDemonstrator();
+        /*ADAPTER PATTERN*/
+        pd.showAdapterPat();
+        /*BRIDGE PATTERN*/
+        pd.showBridgePat();
+        /*COMPOSITE PATTERN*/
+        pd.showCompositePat();
+        /*FLYWEIGHT PATTERN*/
+        pd.showFlyweightPat();
+        /*DECORATOR PATTERN*/
+        pd.showDecoratorPat();
     }
 }
