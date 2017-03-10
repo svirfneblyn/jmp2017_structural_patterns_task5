@@ -8,6 +8,7 @@ import bridge.terraintocrosstypes.RiverCross;
 import composite.FSManager;
 import decorator.SmartHingedBridge;
 import decorator.SmartPantoonBridge;
+import flyweight.FlyweightStylesFactory;
 
 import static adapter.BridgeEnum.RAILROAD_BRIDGE;
 import static adapter.BridgeEnum.RIVER_BRIDGE;
@@ -17,9 +18,12 @@ import static flyweight.Constants.PATH_TO_SCAN;
 public class PatternDemonstrator {
     public void showBridgePat() {
         printPatternType("BRIDGE");
-        CrossingImpl cr = new RiverCross(new PantoonCrossing());
-        cr.deploy();
-        cr.undeploy();
+        CrossingImpl srRiver = new RiverCross(new PantoonCrossing());
+        CrossingImpl crRail = new RiverCross(new PantoonCrossing());
+        srRiver.deploy();
+        srRiver.undeploy();
+        crRail.deploy();
+        crRail.undeploy();
     }
     public void showAdapterPat() {
         printPatternType("ADAPTER");
@@ -44,10 +48,10 @@ public class PatternDemonstrator {
     }
     public void showFlyweightPat() {
         printPatternType("FLYWEIGHT");
-        CompositeAndBridgeImpl adapt = new CompositeAndBridgeImpl();
-        adapt.buildBridge(RIVER_BRIDGE);
-        adapt.buildBridge(RAILROAD_BRIDGE);
-        adapt.getFileNamesScanner();
+        FlyweightStylesFactory flyweight =  FlyweightStylesFactory.getInstance();
+        flyweight.getBlogerFlyweight("horror").getStyleForBlog("coolBlg");
+        flyweight.getBlogerFlyweight("funny").getStyleForBlog("funnylBlg");
+
     }
     private void printPatternType(String patternName) {
         System.out.println("-------------------" + patternName + " PATTERN DEMO ----------------------");

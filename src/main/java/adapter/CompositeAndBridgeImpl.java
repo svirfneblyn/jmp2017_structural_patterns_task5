@@ -13,7 +13,7 @@ public class CompositeAndBridgeImpl implements CompositeAndBridgeAdapter {
         cr.undeploy();
     }
     public void getFileNamesScanner() {
-        FSManager fs= new FSManager();
+        FSManager fs = new FSManager();
         fs.compositDemo(PATH_TO_SCAN);
     }
 }

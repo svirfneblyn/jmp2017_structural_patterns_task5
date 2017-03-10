@@ -6,11 +6,13 @@ import java.util.List;
 
 /*composite*/
 public class FSManager {
+
     public void compositDemo(String volume) {
         File listFile = new File(volume);
         List<DirectoryEntity> dirList = new ArrayList<>();
         File[] allFiles = listFile.listFiles();
         assert allFiles != null;
+
         for (File file : allFiles) {
             if (file.isDirectory()) {
                 System.out.println("Directory  " + file.getName() + " scanning ");
