@@ -35,12 +35,12 @@ public class DirectoryEntity implements FileSystemEntity {
     }
 
     @Override
-    public void fileSystemEntityName(String fn) {
+    public void getFileSystemEntityName(String fn) {
         System.out.println(fn);
     }
 
     @Override
-    public void fileSystemEntitySize(long fs) {
+    public void getFileSystemEntitySize(long fs) {
         System.out.println(fs);
     }
 

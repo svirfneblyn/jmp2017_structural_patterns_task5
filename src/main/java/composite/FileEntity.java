@@ -23,11 +23,11 @@ public class FileEntity implements FileSystemEntity {
         this.fileSize = fileSize;
     }
 
-    public void fileSystemEntityName(String fn) {
+    public void getFileSystemEntityName(String fn) {
         this.fileName=fn ;
     }
 
-    public void fileSystemEntitySize(long fs) {
+    public void getFileSystemEntitySize(long fs) {
         this.fileSize=fs;
     }
 

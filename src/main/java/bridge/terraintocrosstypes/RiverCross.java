@@ -1,10 +1,11 @@
 package bridge.terraintocrosstypes;
 
-import bridge.CrossingImpl;
+import bridge.Crossing;
 import bridge.icrossing.ICrossing;
 
 /*bridge*/
-public class RiverCross extends CrossingImpl {
+public class RiverCross extends Crossing {
+
     public RiverCross(ICrossing iCrossing) {
         super(iCrossing);
     }

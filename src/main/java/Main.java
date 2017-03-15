@@ -1,19 +1,18 @@
-import facade.PatternDemonstrator;
-
+import facade.PatternDemonstratorFacade;
 
 public class Main {
     public static void main(String[] args) {
         /*FACADE PATTERN*/
-        PatternDemonstrator pd = new PatternDemonstrator();
+         PatternDemonstratorFacade pd = new PatternDemonstratorFacade();
         /*ADAPTER PATTERN*/
-        pd.showAdapterPat();
+         pd.showAdapterPat();
         /*BRIDGE PATTERN*/
-        pd.showBridgePat();
+         pd.showBridgePat();
         /*COMPOSITE PATTERN*/
-        pd.showCompositePat();
+         pd.showCompositePat();
         /*FLYWEIGHT PATTERN*/
-        pd.showFlyweightPat();
+         pd.showFlyweightPat();
         /*DECORATOR PATTERN*/
-        pd.showDecoratorPat();
+         pd.showDecoratorPat();
     }
 }
