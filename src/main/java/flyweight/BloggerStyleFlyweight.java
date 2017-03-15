@@ -1,8 +1,7 @@
 package flyweight;
 
-/**
- * Created by Ihar_Rubanovich on 3/9/2017.
- */
+/*flyweight*/
 public interface BloggerStyleFlyweight {
-    public void getStyleForBlog(String blogName);
+
+     void getStyleForBlog(String blogName);
 }

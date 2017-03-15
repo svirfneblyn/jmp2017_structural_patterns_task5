@@ -1,8 +1,6 @@
 package composite;
 
-/**
- * Created by Ihar_Rubanovich on 2/1/2017.
- */
+/*composite*/
 public class FileEntity implements FileSystemEntity {
 
     private String fileName;
@@ -20,15 +18,16 @@ public class FileEntity implements FileSystemEntity {
         return fileSize;
     }
 
-     public FileEntity(String fileName, long fileSize) {
+    public FileEntity(String fileName, long fileSize) {
         this.fileName = fileName;
         this.fileSize = fileSize;
     }
 
-    public void fileSystemEntityName(String fn) {
+    public void getFileSystemEntityName(String fn) {
         this.fileName=fn ;
     }
-    public void fileSystemEntitySize(long fs) {
+
+    public void getFileSystemEntitySize(long fs) {
         this.fileSize=fs;
     }
 

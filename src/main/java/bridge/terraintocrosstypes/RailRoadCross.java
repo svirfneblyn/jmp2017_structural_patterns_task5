@@ -1,12 +1,14 @@
 package bridge.terraintocrosstypes;
 
-import bridge.CrossingImpl;
+import bridge.Crossing;
 import bridge.icrossing.ICrossing;
 
-/**
- * Created by Ihar_Rubanovich on 3/7/2017.
- */
-public class RailRoadCross extends CrossingImpl {
+/*bridge*/
+public class RailRoadCross extends Crossing {
+
+    public RailRoadCross(ICrossing iCrossing) {
+        super(iCrossing);
+    }
 
     public void deploy() {
         System.out.println("Rail road will cross with help of hinged bridge.. ");
@@ -18,7 +20,5 @@ public class RailRoadCross extends CrossingImpl {
         System.out.println("Rail road crossed succesfully ..");
     }
 
-    public RailRoadCross(ICrossing iCrossing) {
-        super(iCrossing);
-    }
+
 }

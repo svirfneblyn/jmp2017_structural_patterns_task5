@@ -1,20 +1,18 @@
 package flyweight;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static flyweight.Constants.FUNNY_STYLE;
 import static flyweight.Constants.HORROR_STYLE;
 
-/**
- * Created by Ihar_Rubanovich on 3/9/2017.
- */
+/*flyweight*/
 public class FlyweightStylesFactory {
+
     private static volatile FlyweightStylesFactory flyweightStylesFactory;
-    private Map<String, BloggerStyleFlyweight> bStyleFlyweightMap;
+    private ConcurrentHashMap<String, BloggerStyleFlyweight> bStyleFlyweightMap;
      /*init pool BloggerStyleFlyweight */
     private FlyweightStylesFactory() {
-        this.bStyleFlyweightMap = new HashMap<String, BloggerStyleFlyweight>();
+        this.bStyleFlyweightMap = new ConcurrentHashMap<String, BloggerStyleFlyweight>();
     }
        /*Fleiweight fabrique Method*/
     public BloggerStyleFlyweight getBlogerFlyweight(String key) {
@@ -28,7 +26,7 @@ public class FlyweightStylesFactory {
             if (key.equals(FUNNY_STYLE)) {
                 bStyleFlyweight = getAction(StyleTypesEnum.FUNNY_STYLE);
             }
-            bStyleFlyweightMap.put(key, bStyleFlyweight);
+            bStyleFlyweightMap.putIfAbsent(key, bStyleFlyweight);
             return bStyleFlyweight;
         }
     }
