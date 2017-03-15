@@ -8,7 +8,7 @@ import org.junit.Test;
 public class CompositeAndBridgeImplTest {
 @Test
     public void adapterTest(){
-    CompositeAndBridgeImpl cm = new CompositeAndBridgeImpl();
+    BridgesImpl cm = new BridgesImpl();
     //cm.defMet();
 }
 }

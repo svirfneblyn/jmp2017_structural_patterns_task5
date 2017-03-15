@@ -8,7 +8,7 @@ public class DirectoryEntity implements FileSystemEntity {
 
     private String directoyName;
     private long dirSize;
-    private List<FileEntity> fileEntityList = new ArrayList();
+    private List<FileSystemEntity> fileEntityList = new ArrayList();
 
     public DirectoryEntity(String directoyName) {
         this.directoyName = directoyName;
@@ -18,7 +18,7 @@ public class DirectoryEntity implements FileSystemEntity {
         fileEntityList.add(fe);
     }
 
-    public FileEntity getChild(int i) {
+    public FileSystemEntity getChild(int i) {
         return fileEntityList.get(i);
     }
 
@@ -30,7 +30,7 @@ public class DirectoryEntity implements FileSystemEntity {
         return directoyName;
     }
 
-    public List<FileEntity> getFileEntityList() {
+    public List<FileSystemEntity> getFileSystemEntityList() {
         return fileEntityList;
     }
 
@@ -48,7 +48,7 @@ public class DirectoryEntity implements FileSystemEntity {
         System.out.println("-------------");
         System.out.println("Directory name = " + getDirectoyName());
         System.out.println("-------------");
-        for (FileEntity fileEntity : fileEntityList) {
+        for (FileSystemEntity fileEntity : fileEntityList) {
             fileEntity.print();
         }
     }

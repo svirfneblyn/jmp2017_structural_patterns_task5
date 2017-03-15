@@ -1,6 +1,6 @@
 package facade;
 
-import adapter.CompositeAndBridgeImpl;
+import adapter.BridgesImpl;
 
 import static adapter.BridgeEnum.RAILROAD_BRIDGE;
 import static adapter.BridgeEnum.RIVER_BRIDGE;
@@ -12,9 +12,8 @@ public class AdapterDemonstrator implements IPrinter {
 
     public void showPattern() {
         print("ADAPTER");
-        CompositeAndBridgeImpl adapt = new CompositeAndBridgeImpl();
+        BridgesImpl adapt = new BridgesImpl();
         adapt.showBridgeActivity(RIVER_BRIDGE);
         adapt.showBridgeActivity(RAILROAD_BRIDGE);
-        adapt.showScannedFileNames();
     }
 }

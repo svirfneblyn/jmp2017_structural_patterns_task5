@@ -5,14 +5,14 @@ public class Main {
         /*FACADE PATTERN*/
          PatternDemonstratorFacade pd = new PatternDemonstratorFacade();
         /*ADAPTER PATTERN*/
-         pd.showAdapterPat();
+    //     pd.showAdapterPat();
         /*BRIDGE PATTERN*/
-         pd.showBridgePat();
+    //     pd.showBridgePat();
         /*COMPOSITE PATTERN*/
          pd.showCompositePat();
         /*FLYWEIGHT PATTERN*/
-         pd.showFlyweightPat();
+    //     pd.showFlyweightPat();
         /*DECORATOR PATTERN*/
-         pd.showDecoratorPat();
+     //    pd.showDecoratorPat();
     }
 }

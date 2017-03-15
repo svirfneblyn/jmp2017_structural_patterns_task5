@@ -2,7 +2,6 @@ package adapter;
 
 /*adapter*/
 
-public interface CompositeAndBridgeAdapter {
+public interface BridgesAdapter {
     public void showBridgeActivity(BridgeEnum typeToCross);
-    public  void showScannedFileNames();
 }

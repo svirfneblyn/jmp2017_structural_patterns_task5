@@ -26,9 +26,13 @@ public class FSManager {
                 }
             }
         }
+        printSystemIerarchy(dirList);
+
+    }
+
+    private void printSystemIerarchy(List<DirectoryEntity> dirList) {
         System.out.println("File System Ierarchy readed ");
         dirList.forEach(DirectoryEntity::print);
-
     }
 
     private DirectoryEntity addFiles(File[] filesInDir, DirectoryEntity directoryEntity) {
